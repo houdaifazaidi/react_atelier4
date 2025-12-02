@@ -43,7 +43,7 @@ function App() {
         
         <h2>Enterer use ville:</h2>
         <input type="text" value={city} onChange={(e) => setCity(e.target.value)}/>
-        <input type="button" onClick={()=> {(city != "") && setCities([...cities, city]) }} value = "add city" />
+        <input type="button" onClick={()=> {(city != "") && setCities([...cities, city]); setCity('') }} value = "add city" />
         <select value={selectedCity} onChange={(e) => setSelectedCity(e.target.value)}>
 
           {
